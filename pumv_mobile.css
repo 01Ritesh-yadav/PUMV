@@ -1,0 +1,762 @@
+/* /////////////////////  421px MOBILE SCREEN SIZES    ///////////////  */
+@media(max-width:425px) {
+
+  #sidebar {
+    z-index: 15;
+    position: fixed;
+    left: -100%;
+    transition: 0.7s ease;
+  }
+
+  .toggle-btn {
+    position: absolute;
+    margin-left: 100%;
+    top: 10px;
+  }
+
+  .toggle-btn span {
+    display: block;
+    background-color: #0098DA;
+    width: 35px;
+    height: 7px;
+    margin: 3px;
+    cursor: pointer;
+  }
+
+  #sidebar.active {
+    left: -40px;
+  }
+
+
+  * {
+    text-decoration: none;
+    box-sizing: border-box;
+  }
+
+  body {
+    margin: 0;
+    padding: 0;
+    background-color: whitesmoke;
+    position: absolute;
+  }
+
+  /* ////////////////////////////////////////   NAVIGATION-BAR   /////////////////////////////////////////////////////  */
+
+
+  .navi_bar {
+    font-family: sans-serif;
+    background: rgba(25, 255, 255, 0.1);
+    backdrop-filter: blur(15px);
+  }
+
+  .navi_bar ul li {
+    color: black;
+    width: 85vw;
+    line-height: 8vh;
+    font-size: 1rem;
+    list-style: none;
+    transition: 0.3s ease;
+    z-index: 8px;
+    text-align: center;
+  }
+
+  .navi_bar ul li:hover {
+    color: white;
+    background: #0098DA;
+  }
+
+  .navi_bar ul li:hover>ul {
+    display: block;
+  }
+
+  .navi_bar ul li ul {
+    display: none;
+  }
+
+  .navi_bar ul li ul li {
+    position: relative;
+    text-align: left;
+    width: 47vw;
+    background: #2222;
+    top: 0px;
+    margin-left: 28vw;
+  }
+
+  .navi_bar ul li ul li ul li {
+
+    margin-left: -5vw;
+    width: 43vw;
+    position: relative;
+    text-align: left;
+  }
+
+  .navi_bar ul li ul li a {
+    color: white;
+  }
+
+  .navi_bar ul li ul li ul li ul li {
+
+    width: 38vw;
+    margin-left: -5vw;
+  }
+
+  .hero {
+    margin-top: 0;
+    width: 100vw;
+    height: 40em;
+    background: url(homebackground.jpeg) no-repeat;
+    background-size: cover;
+    position: relative;
+    z-index: 0;
+  }
+
+  .hero::before {
+    content: "";
+    width: 100vw;
+    height: 40em;
+    background: rgba(0, 0, 0, 0.71);
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+  }
+
+  .hero-details {
+    border: 1px solid transparent;
+    width: 80vw;
+    margin: 0 auto;
+    color: white;
+  }
+
+  .hero-details h1 {
+    margin-top: 1em;
+    font-size: 2em;
+  }
+
+  h1 {
+    margin: 0;
+  }
+
+  a {
+    font-family: 'Roboto';
+    color: yellow;
+    text-decoration: none;
+    font-weight: bolder;
+    font-size: 1.2em;
+  }
+
+
+
+  /* ////////////////////////////////////////    KNOW ABOUT US  OR FLEX BOX   /////////////////////////////////////////////////////  */
+
+  .know {
+    font-size: 2em;
+    box-shadow: 5px 5px 10px;
+    border-radius: 10px;
+    width: 75vw;
+    color: green;
+    margin-left: 1.4em;
+    margin-top: 2em;
+  }
+
+  .flaxbox-itom {
+    width: 85vw;
+    margin-left: 8vw;
+    margin-top: 4rem;
+    box-shadow: 7px 7px 20px 0 rgba(5, 55, 254, 0.9),
+      7px 7px 20px 0 rgba(0, 0, 0, 0.3);
+    transition: 0.8s;
+    border-radius: 10px;
+  }
+
+  .flaxbox-itom:hover {
+    box-shadow: -7px 7px 20px 0 red;
+    transition: .6s;
+  }
+
+  section .allflex .flaxbox-itom p {
+    color: gray;
+    font-size: 1rem;
+    margin-top: -2em;
+    justify-content: center;
+    font-family: 'Times New Roman', Times, serif;
+    padding: 1rem;
+    height: auto;
+    padding-bottom: 2em;
+  }
+
+  section .allflex .flaxbox-itom .title {
+    color: black;
+    padding: 1rem;
+    margin-left: 0;
+  }
+
+  .hr_line {
+    border: 2px solid gray;
+  }
+
+  /* ////////////////////////////////////////    ACCORDIAN MENU   /////////////////////////////////////////////////////  */
+
+  /* thid code is for Accordions */
+  .accordion-body .accordion .accor_heading {
+    text-align: center;
+    font-size: 1.5rem;
+    color: black;
+  }
+
+  .accordion {
+    width: 90vw;
+    box-shadow: 2px 2px 25px;
+    margin: 90px auto;
+    background: lightsalmon;
+    padding: 2rem 2rem;
+  }
+
+  .accordion .container-box {
+    position: relative;
+    padding: 1rem 0;
+    color: black;
+    cursor: pointer;
+  }
+
+  .accordion .lable {
+    position: relative;
+    padding: 10px 0;
+    font-size: 1.2rem;
+    color: black;
+    cursor: pointer;
+  }
+
+  .accordion .lable::before {
+    content: "+";
+    color: black;
+    position: absolute;
+    top: 50%;
+    right: -5px;
+    font-size: 1.5rem;
+    transform: translateY(-50%);
+  }
+
+  .accordion .content {
+    position: relative;
+    background: lightsalmon;
+    height: 0;
+    font-size: 1rem;
+    text-align: justify;
+    width: 60vw auto;
+    overflow: hidden;
+    transition: 0.5s;
+  }
+
+  .accordion hr {
+    width: 100;
+    margin-left: 0;
+    border: 2px solid gray;
+  }
+
+  .accordion .container-box.start .content {
+    height: 35vh;
+  }
+
+  .accordion .container-box.start .lable::before {
+    content: "-";
+    font-size: 35px;
+  }
+
+  /* ////////////////////////////////////////    CONTACT FORM CSS   /////////////////////////////////////////////////////  */
+  hr {
+    display: block;
+    border-top: 3px solid blue;
+    margin-bottom: 15px;
+  }
+
+  section .contact-top {
+    font-size: 1.5em;
+    color: blue;
+    text-align: center;
+    margin-top: 2em;
+  }
+
+  section .contact-top lable {
+    font-size: 1.2rem;
+    color: green;
+  }
+
+  section .contact_to_kosikalan h3 {
+    color: #E81A30;
+    font-size: 1.2rem;
+  }
+
+  section .contact_to_kosikalan {
+    font-size: .8rem;
+    width: 100vw;
+    padding: 10px;
+  }
+
+  section .contact_to_kosikalan .tele_link {
+    color: blue;
+  }
+
+  section .Head_quater {
+    font-size: .8rem;
+    color: black;
+    width: 100vw;
+    padding: 10px;
+  }
+
+  section .Head_quater h3 {
+    color: #E81A30;
+    font-size: 1.2rem;
+  }
+
+  section .Head_quater .tele_link {
+    color: blue;
+  }
+
+
+  section .cont {
+    width: 100vw;
+    height: auto;
+    background: black
+  }
+
+  section .cont h2 {
+    text-align: center;
+    text-transform: uppercase;
+    color: white;
+    padding: 10px;
+    font-size: 1.2rem;
+  }
+
+  section .cont p {
+    color: lime;
+    font-size: 1rem;
+    text-align: center;
+  }
+
+  section .cont input {
+    margin-top: 8px;
+    font-size: 1.2rem;
+    margin-left: 10px;
+    padding: 5px;
+    margin-left: 1.5em;
+    background: palegreen;
+    height: auto;
+    width: auto;
+  }
+
+
+  textarea {
+    width: 100vw;
+    height: auto;
+    margin-top: 30px;
+    padding: 10px;
+    border-style: none;
+    justify-content: center;
+    background-color: palegreen;
+    font-family: cooper;
+  }
+
+  section .cont .submit_contect {
+    text-transform: uppe rcase;
+    background: orange;
+    margin-left: 33vw;
+    border-radius: 10px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    padding: 5px;
+    font-family: cooper;
+  }
+
+
+  section .cont .submit_contect:hover {
+    background-color: lime;
+  }
+
+  section .map_frame {
+    width: 100%;
+    height: 60%;
+    margin-top: 15px;
+  }
+
+
+
+
+  /* ////////////////////////////////////////    ALL FOOTER SECTION   /////////////////////////////////////////////////////  */
+
+  footer {
+    position: relative;
+    width: 100vw;
+    background: black;
+    margin-top: 5em;
+    color: white;
+  }
+
+  .main-content {
+    display: flex;
+  }
+
+  .main-content .box {
+    flex-basis: 50%;
+    padding: 10px 10px;
+
+  }
+
+  .box h2 {
+    font-size: 1rem;
+    font-weight: 600;
+    text-transform: uppercase;
+  }
+
+  .box .content {
+    margin: 20px 0 0 0;
+    position: relative;
+  }
+
+  .box .content:before {
+    position: absolute;
+    content: ' ';
+    top: -10px;
+    height: 5px;
+    width: 100%;
+    background: #E81A30;
+  }
+
+  .box .content:after {
+    position: absolute;
+    content: '';
+    height: 5px;
+    width: 15%;
+    background: yellowgreen;
+    top: -10px;
+  }
+
+  .center .content .text a {
+    color: white;
+    font-size: 1rem;
+  }
+
+  .center .content .fas {
+    font-size: 1.1rem;
+    color: #E81A30;
+    height: 40px;
+    width: 40px;
+    line-height: 40px;
+    text-align: center;
+    border-radius: 50%;
+    transition: 0.3s;
+    cursor: pointer;
+  }
+
+  .center .content .fas:hover {
+    background: cyan;
+
+  }
+
+  .center .content .phone {
+    margin: 15px 0;
+  }
+
+  .right form .text {
+    font-size: 1rem;
+    margin-bottom: 5px;
+    color: white;
+  }
+
+  .right form .msg {
+    margin-top: 10px;
+  }
+
+  .right form input,
+  .right form textarea {
+    width: 100%;
+    font-size: 1rem;
+    background: #343a40;
+    padding-left: 10px;
+    border: 1px solid gray;
+    color: cyan;
+  }
+
+  .right form input:focus,
+  .right form textarea:focus {
+    outline-color: white;
+  }
+
+  .right form input {
+    height: 30px;
+    color: cyan;
+  }
+
+  .right form .btn {
+    margin-top: 20px;
+    align-items: center;
+    justify-content: center;
+  }
+
+  /* ////////////////////////////////////////    SEND NEON BOTTON (MESS. SECTION FOOTER BOTTOM)  ////////////////////////////////////////  */
+
+  .messege_send {
+    position: relative;
+    display: inline-block;
+    margin-top: 10px;
+    padding: 5px 20px;
+    color: white;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    text-decoration: none;
+    transition: 0.2s;
+    overflow: hidden;
+    font-size: 2.5vh;
+  }
+
+  .messege_send:hover {
+    color: yellow;
+    background: green;
+    transition-delay: 1.5s;
+  }
+
+  .messege_send span {
+    position: absolute;
+    display: block;
+  }
+
+  .messege_send span:nth-child(1) {
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 5px;
+    background: linear-gradient(90deg, transparent, red);
+  }
+
+  .messege_send:hover span:nth-child(1) {
+    left: 100%;
+    transition: .5s;
+  }
+
+  .messege_send span:nth-child(3) {
+    bottom: 0;
+    right: -100%;
+    width: 100%;
+    height: 5px;
+    background: linear-gradient(270deg, transparent, lime);
+  }
+
+  .messege_send:hover span:nth-child(3) {
+    right: 100%;
+    transition: 1s;
+    transition-delay: 0.5s
+  }
+
+  .messege_send span:nth-child(2) {
+    top: -100%;
+    right: 0;
+    width: 5px;
+    height: 100%;
+    background: linear-gradient(180deg, transparent, yellow);
+  }
+
+  .messege_send:hover span:nth-child(2) {
+    top: 100%;
+    transition: 1s;
+    transition-delay: 0.25s
+  }
+
+
+  .messege_send span:nth-child(4) {
+    bottom: -100%;
+    left: 0;
+    width: 5px;
+    height: 100%;
+    background: linear-gradient(360deg, transparent, white);
+  }
+
+  .messege_send:hover span:nth-child(4) {
+    bottom: 100%;
+    transition: 1s;
+    transition-delay: 0.75s
+  }
+
+  /* ////////////////////////////////////////    SEND NEON BOTTON (MESS. SECTION FOOTER BOTTOM)  ////////////////////////////////////////  */
+
+
+
+  .wrapper {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    margin-top: 7vh;
+    margin-left: 0;
+  }
+
+  .wrapper .icon {
+    position: relative;
+    border-radius: 50%;
+    padding: 10px;
+    margin: 10px;
+    width: 50px;
+    height: 50px;
+    font-size: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    cursor: pointer;
+  }
+
+  .wrapper .icon i {
+    transition: .4s linear;
+  }
+
+  .wrapper .tooltip {
+    position: absolute;
+    top: 0;
+    font-size: 1rem;
+    background: red;
+    color: white;
+    padding: 5px 8px;
+    border-radius: 5px;
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+    opacity: 0;
+    pointer-events: none;
+    transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  }
+
+  .wrapper .icon::before,
+  .wrapper .icon::after {
+    content: '';
+    position: absolute;
+    box-sizing: border-box;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    transition: .4s linear;
+  }
+
+  .wrapper .icon:hover .tooltip {
+    top: -40px;
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+  }
+
+  .wrapper .icon:hover span,
+  .wrapper .icon:hover .tooltip {
+    text-shadow: 0px -1px 0px rgba(0, 0, 0, 0.1);
+    transform: scale(.8);
+    transition: .4s linear;
+  }
+
+  .wrapper .icon:hover::before {
+    border-radius: 50%;
+    border-left: 4px solid;
+    border-right: 4px solid;
+    transform: skewX(20deg);
+    color: red;
+  }
+
+  .wrapper .icon:hover::after {
+    border-radius: 50%;
+    border-top: 4px solid;
+    border-bottom: 4px solid;
+    border-bottom: 4px solid;
+    transform: skewY(-20deg);
+    color: cyan;
+  }
+
+  /* ////////////////////////////////////////    BOTTOM ( @COPY )   /////////////////////////////////////////////////////  */
+
+
+  @media screen and (max-width: 425px) {
+
+    footer {
+      position: relative;
+      bottom: 0px;
+    }
+
+    .main-content {
+      flex-wrap: wrap;
+      flex-direction: column;
+    }
+
+    .main-content .box {
+      margin: 5px 0;
+    }
+  }
+
+  /* //////  Admission criteria ////// */
+  .admi_session {
+    color: gray;
+    padding: 10px;
+  }
+
+  hr {
+    border: 2px solid gray;
+    width: 100;
+  }
+
+  .age_criteria p {
+    padding: 10px;
+    font-weight: bold;
+  }
+
+  .list {
+    color: gray
+  }
+
+  .list .bullet_point {
+    font-size: 1rem;
+    padding: 10px;
+    text-align: justify;
+    padding-right: 10px;
+  }
+
+  /* ///// Fee Structure code css //////////  */
+  .table {
+    border: 2px solid orangered;
+    width: 90vw;
+    margin-left: 5.5vw;
+    margin-top: 5vh;
+    margin-bottom: 10vh;
+  }
+
+  .fee_lable {
+    margin-top: 5vh;
+    width: 100vw;
+    text-align: center;
+    color: grey;
+    padding: 1em;
+    align-items: center;
+    font-size: 1.5em;
+  }
+
+  .table .fee_heading {
+    padding: 10px;
+    background: orangered;
+    font-weight: bold;
+    font-size: 1.2em;
+  }
+
+  .r1 td {
+    padding: 10px;
+    background: gray;
+  }
+
+  .r2 td {
+    padding: 10px;
+    background: lightblue;
+  }
+
+  .r1 td:hover {
+    background: darkcyan;
+  }
+
+  .r2 td:hover {
+    background: lightsalmon
+  }
+
+
+
+
+
+}
